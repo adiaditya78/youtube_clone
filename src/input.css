@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+.side_bar_icon {
+    @apply rounded-2xl text-[10px] hover:bg-gray-200;
+}
+
+.popular {
+    @apply text-[16px] font-semibold h-8 bg-gray-100 rounded-lg p-3 flex justify-center items-center;
+}
+
+#video_body {
+    @apply grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] items-start gap-x-1 gap-y-3 p-3;
+}
+
+.container_style {
+    @apply w-full h-full bg-white transition duration-300 ease-out hover:bg-blue-100 rounded-xl;
+}
+
+.sub_container {
+    @apply p-2 flex flex-col;
+}
+
+.thumbnail_container {
+    @apply aspect-video overflow-hidden rounded-xl mb-3;
+}
+
+.thumbnail {
+    @apply w-full h-full object-cover;
+}
+
+.content_box {
+    @apply flex;
+}
+
+.channel_logo {
+    @apply w-10 h-10 shrink-0 mr-3;
+}
+
+.channel_logo img {
+    @apply w-full h-full rounded-full;
+}
+
+.video_title {
+    @apply font-semibold line-clamp-2 text-sm leading-tight;
+}
+
+.video_details p {
+    @apply text-gray-500 text-xs;
+}
+
+.publishedDetails {
+    @apply flex gap-1.5 text-xs text-gray-500;
+}

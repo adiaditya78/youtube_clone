@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+</head>
+<body>
+    <nav class="flex justify-evenly items-center h-16 sticky top-0 z-50 bg-white" >
+        <div class="flex justify-center items-center gap-6 mr-15 h-10 min-w-max sm:mx-5 md:mx-7 lg:mx-0">
+            <label class="cursor-pointer" id="toggle_btn">
+                <input type="button" class="hidden w-0 h-0">
+                <img src="./images/menu.png" class="w-5 h-5">
+            </label>
+            <img src="./images/logo.png" title="YouTube Home" class="h-7 w-29">
+        </div>
+        <div id="search-container" class="flex items-center w-160">
+            <input type="search"id="search-bar" class="border border-[#d0d0d0] rounded-l-2xl w-full h-10 p-4 font-medium" placeholder="Search">
+            <div id="search-btn" class="text-center bg-[#f2f2f2] border border-[#d0d0d0] rounded-r-2xl h-10 w-18 cursor-pointer p-1.5">
+                <span class="material-symbols-outlined" id="search-icon">search</span>
+            </div>
+        </div>
+
+        <div id="voice" class="rounded-3xl h-10 w-11 flex items-center justify-center bg-[#f2f2f2] cursor-pointer">
+            <span class="material-symbols-outlined" id="voice-icon">mic</span>
+        </div>
+
+        <div id="create" class="bg-[#f2f2f2] rounded-3xl  h-10 w-25 flex items-center justify-evenly font-semibold p-1 cursor-pointer">
+            <span class="material-symbols-outlined">add</span> Create
+        </div>
+
+        <div id="bell_icon" class="text-4xl cursor-pointer">
+            <span class="material-symbols-outlined" id="bell">notifications</span>
+        </div>
+
+        <div id="user" class="cursor-pointer">
+            <img src="./images/user.png" class="w-10 h-10">
+        </div>
+    </nav>
+    <div class="grid grid-cols-1 md:grid-cols-[76px_1fr] grid-rows-[auto_1fr]">
+        <div id="sidebar-page" class="sticky top-16 row-span-full h-[calc(100vh-64px)] hidden md:flex
+        md:flex-col gap-1 px-1 py-3">
+
+            <div class="side_bar_icon">
+                <label for="home" class="w-full h-17 flex flex-col items-center justify-center">
+                    <input type="radio" name="side_bar" id="home" checked class="hidden w-0 h-0">
+                    <span class="material-symbols-outlined" id="home_style">home</span>
+                    <span>Home</span>
+                </label>
+            </div>
+
+            <div class="side_bar_icon">
+                <label for="shorts" class="w-full h-17 flex flex-col items-center justify-center">
+                    <input type="radio" name="side_bar" id="shorts" class="hidden w-0 h-0">
+                    <img src="./images/icons8-youtube-shorts-24.png">
+                    <span>Shorts</span>
+                </label>
+            </div>
+
+            <div class="side_bar_icon">
+                <label for="subscription" class="w-full h-17 flex flex-col items-center justify-center">
+                    <input type="radio" name="side_bar" id="subscription" class="hidden w-0 h-0">
+                    <span class="material-symbols-outlined" id="sub">subscriptions</span>
+                    <span>Subscription</span>
+                </label>
+            </div>
+
+            <div class="side_bar_icon">
+                <label for="profile" class="w-full h-17 flex flex-col items-center justify-center">
+                    <input type="radio" name="side_bar" id="profile" class="hidden w-0 h-0">
+                    <img src="./images/icons8-profile-32.png" alt="">
+                    <span>Profile</span>
+                </label>
+            </div>
+        </div>
+        <div id="filter" class="sticky top-16 z-50 bg-white flex items-center h-14 px-6 gap-4">
+            <div class="popular">All</div>
+            <div class="popular">Music</div>
+            <div class="popular">T-Series</div>
+        </div>
+        <div id="video_body"></div>
+    </div>
+    
+    <div id="second_page" class="fixed inset-0 z-50 w-screen h-screen bg-[rgba(0,0,0,0.4)] hidden">
+        <div id="sidebar" class="h-full w-62 bg-white pl-1">
+            <nav class="flex justify-start h-14 w-full items-center gap-6 ml-4">
+                <button id="toggle_btn_sec">
+                    <img src="./images/menu.png" class="h-5 w-5">
+                </button>
+
+                <img src="./images/logo.png" title="YouTube Home" class="h-7 w-25">
+            </nav>
+        </div>
+    </div>
+    <script src="./src/index.js"></script>
+</body>
+</html>
