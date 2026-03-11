@@ -5,7 +5,7 @@ const my_API_key ="AIzaSyCbzqdx_d_XvojNM1kL4Vmf-Rn6BAhU0Jc";
 const video_http = "https://www.googleapis.com/youtube/v3/videos?";
 
 // no of content want
-const maxContent = 16;
+const maxContent = 48;
 
 const channel_http = "https://www.googleapis.com/youtube/v3/channels?";
 //param generator
